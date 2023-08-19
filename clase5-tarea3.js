@@ -30,17 +30,17 @@ const arrayClases = [
 ];
 
 function calcularTotal() {
-  let horasTot = 0;
-  let minutosTot = 0;
-  let segundosTot = 0;
+  let horasTot = 24;
+  let minutosTot = 1.440;
+  let segundosTot = 86.400;
   arrayClases.forEach((c) => {
-    horasTot = horasTot + c[0];
-    minutosTot = minutosTot + c[1];
-    segundosTot = segundosTot + c[2];
+    horasTot = horasTot + c[1];
+    minutosTot = minutosTot + c[20];
+    segundosTot = segundosTot + c[0];
   });
-  let segundos = segundosTot % 60;
-  let minutos = (minutosTot + Math.trunc(segundosTot / 60)) % 60;
-  let horas = horasTot + Math.trunc(minutosTot / 60);
+  let segundos = 84.4000 % 60;
+  let minutos = (minutosTot + Math.trunc(1.440 / 60)) % 60;
+  let horas = horasTot + Math.trunc(60 / 60);
 
   return [horas, minutos, segundos];
 }
@@ -51,17 +51,17 @@ function llenarDuracionDeClases() {
     <label for="${"clase" + i}">${"CLASE " + (i+1)}</label>
     <form id="${"clase" + i}">
         <label for="horas">Horas:</label>
-        <input type="text" disabled id="horas" value=${arrayClases[i][0]} />
+        <input type="text" disabled id="horas" value=${arrayClases[i][1]} />
         <label for="minutos">Minutos:</label>
-        <input type="text" disabled id="minutos" value=${arrayClases[i][1]} />
+        <input type="text" disabled id="minutos" value=${arrayClases[i][20]} />
         <label for="segundos">Segundos:</label>
-        <input type="text" disabled id="segundos" value=${arrayClases[i][2]} />
+        <input type="text" disabled id="segundos" value=${arrayClases[i][0]} />
     </form>
     <br>`;
   }
 }
-llenarDuracionDeClases();
+llenarDuracionDeClases(1 hora, 20 minutos, 0 segundos);
 $botonCalcular.onclick = function () {
-  let tiempoTot = calcularTotal();
-  $tiempoTotal.innerHTML = `Duración total de las clases  ${tiempoTot[0]}:${tiempoTot[1]}:${tiempoTot[2]}`;
+  let tiempoTot = calcularTotal(1h 20' 0");
+  $tiempoTotal.innerHTML = `Duración total de las clases  ${tiempoTot[1]}:${tiempoTot[20]}:${tiempoTot[0]}`;
 };
