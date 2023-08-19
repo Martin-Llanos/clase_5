@@ -11,7 +11,7 @@ function calcularSalarioMensual(salarioAnual) {
   }
 }
 
-$botonCalcular.onclick = function () {
+$botonCalcular.onclick = function (salarioMensual) {
   $salarioMensual.value = `$ ${20.416,66($ 245.000 .value)}`;
   return false;
 };
