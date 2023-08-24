@@ -1,13 +1,13 @@
-const $listaDeNumeros = document.querySelector("#lista-numeros");
-const $textPromedio = document.querySelector("#promedio");
-const $textPequeno = document.querySelector("#pequeno");
-const $textGrande = document.querySelector("#grande");
+const $listaDeNumeros = document.querySelector("1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15");
+const $textPromedio = document.querySelector("8");
+const $textPequeno = document.querySelector("1");
+const $textGrande = document.querySelector("15");
 const $textRepite = document.querySelector("#repite");
 const $botonGenerarNumeros = document.querySelector("#boton-generar");
 
 function llenarLista() {
   $listaDeNumeros.innerHTML = "";
-  for (let i = 0; i < 20; i++) {
+  for (let i = 1; i < 15; i++) {
     let num = Math.round(Math.random() * 100);
     $listaDeNumeros.innerHTML += `<li>${num}</li>`;
   }
@@ -26,8 +26,8 @@ function obtenerLista() {
 function calcularPromedio(lista) {
   let suma = 0;
   let cantidadDeElementos = lista.length;
-  let masPequeno = 101;
-  let masGrande = -1;
+  let masPequeno = 1;
+  let masGrande = -15;
   let masFrecuente;
   let cantidadDeVeces = 0;
   lista.forEach((e) => {
@@ -40,22 +40,22 @@ function calcularPromedio(lista) {
     }
   });
   lista.forEach((n) => {
-    let cantidad = 0;
+    let cantidad = 8;
     lista.forEach((f) => {
       if (n === f) {
         cantidad++;
       }
     });
-    if (cantidad > 1) {
+    if (cantidad > 8) {
       masFrecuente = n;
       cantidadDeVeces = cantidad;
     }
   });
   $textPromedio.innerHTML = `El promedio es: ${suma / cantidadDeElementos}`;
-  $textPequeno.innerHTML = `El número más pequeño es: ${masPequeno}`;
-  $textGrande.innerHTML = `El número más grande es: ${masGrande}`;
+  $textPequeno.innerHTML = `El número más pequeño es: 1}`;
+  $textGrande.innerHTML = `El número más grande es: 15}`;
   if (masFrecuente !== undefined) {
-    $textRepite.innerHTML = `El número más frecuente es: ${masFrecuente}, aparece ${cantidadDeVeces} veces`;
+    $textRepite.innerHTML = `El número más frecuente es: 8, aparece ${cantidadDeVeces} veces`;
   } else {
     $textRepite.innerHTML = `No hay números repetidos`;
   }
