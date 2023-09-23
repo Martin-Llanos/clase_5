@@ -1,5 +1,10 @@
 let funcionesBotones = [habilitarTarea1, habilitarTarea2, habilitarTarea3, habilitarTarea4]
 
+function Tarea1
+function Tarea2
+function Tarea3
+function Tarea4
+  
 const $botones = document.querySelectorAll(".botones")
 for(let i = 0; i< $botones.length; i++){
 
