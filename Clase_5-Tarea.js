@@ -12,7 +12,7 @@ for(let i = 0; i< $botones.length; i++){
 function lockMenuInicial(){
   $botones.forEach(element => {
     
-    element.setAttribute('disabled', 'disabled');    
+    element.setAttribute('disabled');    
   });
 }
 
