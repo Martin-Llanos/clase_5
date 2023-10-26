@@ -10,29 +10,29 @@
     background-color: red;
 }
 .blue{
-    background-color: blue;
+    background-color: gray;
 }
 .yellow{
-    background-color: yellow;
+    background-color: drakturquoise;
 }
 .green{
-    background-color: green;
+    background-color: yellow;
 }
 
 .gameboard{
-    border: 1px solid rgba(161, 110, 80, 0.548);
-    background-color: rgba(161, 110, 80, 0.548);
+    border: 1px solid rgba(181, 166, 66, 0.548);
+    background-color: rgba(255, 215, 0, 0.548);
     border-radius: 25px;
 }
 
 body{
-    background-color: rgb(139, 211, 211);
+    background-color: rgb(128, 0, 128);
 }
 
 .top-bar{
-    border: 1px solid rgba(161, 110, 80, 0.548);
+    border: 1px solid rgba(205, 127, 50, 0.548);
     margin-top: 4px;
     margin-bottom: 14px;
-    background-color: rgba(161, 110, 80, 0.548);
+    background-color: rgba(128, 0, 0, 0.548);
     border-radius: 25px;
 }
