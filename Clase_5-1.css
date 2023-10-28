@@ -1,8 +1,8 @@
 .circle{
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border-radius: 250px;
-    opacity: 0.5;
+    opacity: 1;
     transition: opacity 500ms;
 }
 
@@ -20,9 +20,9 @@
 }
 
 .gameboard{
-    border: 1px solid rgba(181, 166, 66, 0.548);
-    background-color: rgba(255, 215, 0, 0.548);
-    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 255, 0.548);
+    background-color: rgba(0, 128, 0, 0.548);
+    border-radius: 30px;
 }
 
 body{
@@ -30,9 +30,9 @@ body{
 }
 
 .top-bar{
-    border: 1px solid rgba(205, 127, 50, 0.548);
-    margin-top: 4px;
-    margin-bottom: 14px;
-    background-color: rgba(128, 0, 0, 0.548);
+    border: 1px solid rgba(255, 215, 0, 0.548);
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: rgba(192, 192, 192, 0.548);
     border-radius: 25px;
 }
